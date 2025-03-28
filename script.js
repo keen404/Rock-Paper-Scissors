@@ -82,10 +82,42 @@ function playRound(humanSelection, computerSelection) {
     }
 }
 
+function playGame() {
+   
+
+    // Round 1
+    let humanSelection  = getHumanChoice();
+    let computerSelection  = getComputerChoice();
+    playRound(humanSelection, computerSelection);   
+
+    // Round2
+    humanSelection  = getHumanChoice();
+    computerSelection  = getComputerChoice();
+    playRound(humanSelection, computerSelection);
+
+    // Round3
+    humanSelection  = getHumanChoice();
+    computerSelection  = getComputerChoice();
+    playRound(humanSelection, computerSelection);
+
+    // Round4
+    humanSelection  = getHumanChoice();
+    computerSelection  = getComputerChoice();
+    playRound(humanSelection, computerSelection);
+    
+    // Round5
+    humanSelection  = getHumanChoice();
+    computerSelection  = getComputerChoice();
+    playRound(humanSelection, computerSelection);
+
+    if (humanScore > computerScore) {
+        console.log("Winer is Human!")
+    }
+    else {
+        console.log("Winer is Computer")
+    }
+}
+
 let humanScore = 0;
 let computerScore = 0;
-
-let humanSelection  = getHumanChoice();
-let computerSelection  = getComputerChoice();
-
-playRound(humanSelection, computerSelection);
+playGame();
