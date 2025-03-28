@@ -34,15 +34,9 @@ function getHumanChoice() {
     return userChoice
 }
 
-let humanScore = 0;
-let computerScore = 0;
-
-let humanChoice = getHumanChoice();
-let computerChoice = getComputerChoice();
-
-function playRound(humanChoice, computerChoice) {
-    let tempHumanChoice = humanChoice.toLowerCase();
-    let tempComputerChoice = computerChoice.toLowerCase();
+function playRound(humanSelection, computerSelection) {
+    let tempHumanChoice = computerSelection.toLowerCase();
+    let tempComputerChoice = humanSelection.toLowerCase();
 
     // IF human is paper and computer is rock 
     if (tempHumanChoice === "paper" && tempComputerChoice === "rock"){
@@ -87,3 +81,11 @@ function playRound(humanChoice, computerChoice) {
         humanScore += 1;
     }
 }
+
+let humanScore = 0;
+let computerScore = 0;
+
+let humanSelection  = getHumanChoice();
+let computerSelection  = getComputerChoice();
+
+playRound(humanSelection, computerSelection);
