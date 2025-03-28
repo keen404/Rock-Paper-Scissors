@@ -35,8 +35,8 @@ function getHumanChoice() {
 }
 
 function playRound(humanSelection, computerSelection) {
-    let tempHumanChoice = computerSelection.toLowerCase();
-    let tempComputerChoice = humanSelection.toLowerCase();
+    let tempHumanChoice = humanSelection.toLowerCase();
+    let tempComputerChoice = computerSelection.toLowerCase();
 
     // IF human is paper and computer is rock 
     if (tempHumanChoice === "paper" && tempComputerChoice === "rock"){
@@ -48,7 +48,7 @@ function playRound(humanSelection, computerSelection) {
     // ELSEIF human is paper and computer is scissors
     else if (tempHumanChoice === "paper" && tempComputerChoice === "scissors"){
         // Show "You lose! Scissors beat Rock"
-        console.log("You lose! Scissors beat Rock");
+        console.log("You lose! Scissors beat Paper");
         // INCREMENT 1 score to computer 
         computerScore += 1;
     }
