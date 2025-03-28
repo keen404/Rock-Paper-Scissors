@@ -33,3 +33,5 @@ function getHumanChoice() {
     // Return user choice
     return userChoice
 }
+
+alert(getHumanChoice())
