@@ -88,31 +88,16 @@ function playGame() {
         }
     }
 
-    // Round 1
-    let humanSelection  = getHumanChoice();
-    let computerSelection  = getComputerChoice();
-    playRound(humanSelection, computerSelection);   
+    const btns = document.querySelectorAll("button");
 
-    // Round2
-    humanSelection  = getHumanChoice();
-    computerSelection  = getComputerChoice();
-    playRound(humanSelection, computerSelection);
-
-    // Round3
-    humanSelection  = getHumanChoice();
-    computerSelection  = getComputerChoice();
-    playRound(humanSelection, computerSelection);
-
-    // Round4
-    humanSelection  = getHumanChoice();
-    computerSelection  = getComputerChoice();
-    playRound(humanSelection, computerSelection);
-    
-    // Round5
-    humanSelection  = getHumanChoice();
-    computerSelection  = getComputerChoice();
-    playRound(humanSelection, computerSelection);
-
+    btns.forEach(function (btn) {
+        btn.addEventListener("click", function() {
+            let playerChoice = btn.innerHTML;
+            console.log(playerChoice);
+        });
+    });
+        
+        
     if (humanScore > computerScore) {
         console.log("Winer is Human!")
     }
