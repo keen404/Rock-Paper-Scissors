@@ -2,18 +2,18 @@
 A simple Rock-Paper-Scissors game where the player competes against the computer. The first to score 5 points wins. The game is implemented with buttons in a browser-based UI.
 
 ## 🛠️ Features
-Intuitive button-based interface (Rock, Paper, Scissors)
+- Intuitive button-based interface (Rock, Paper, Scissors)
 
-Real-time result display and score tracking
+- Real-time result display and score tracking
 
-Ends the game automatically when either side reaches 5 points
+- Ends the game automatically when either side reaches 5 points
 
-Disables buttons after the game ends
+- Disables buttons after the game ends
 
 ## 📁 Project Structure
-index.html: Basic structure of the web page with buttons and result display
+- index.html: Basic structure of the web page with buttons and result display
 
-script.js: Game logic and DOM interaction
+- script.js: Game logic and DOM interaction
 
 ## 🔍 Key Functions
 ### getComputerChoice()
@@ -24,30 +24,30 @@ js
 Math.floor(Math.random() * 3)
 ```
 
-0 = Rock
+- 0 = Rock
 
-1 = Paper
+- 1 = Paper
 
-2 = Scissors
+- 2 = Scissors
 
 ### UI Input (replaces getHumanChoice())
-Instead of prompting the user via prompt(), the UI now provides 3 buttons: Rock, Paper, and Scissors.
+- Instead of prompting the user via prompt(), the UI now provides 3 buttons: Rock, Paper, and Scissors.
 
-When a button is clicked, the value is used as the player's choice.
+- When a button is clicked, the value is used as the player's choice.
 
 ### playRound(humanSelection, computerSelection)
-Compares both choices to determine the round winner
+- Compares both choices to determine the round winner
 
-Updates scores and displays results
+- Updates scores and displays results
 
-Ends the game when either score reaches 5
+- Ends the game when either score reaches 5
 
-Hides all buttons when the game ends
+- Hides all buttons when the game ends
 
 ### playGame()
-Initializes scores and sets up button event listeners
+- Initializes scores and sets up button event listeners
 
-Handles the main gameplay loop through event-driven interactions
+- Handles the main gameplay loop through event-driven interactions
 
 ### 🧠 Developer Notes
 This version transitions from basic JavaScript prompts to interactive DOM-based input to improve usability and align with modern web development practices.
