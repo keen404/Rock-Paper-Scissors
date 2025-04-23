@@ -26,13 +26,15 @@ document.addEventListener("DOMContentLoaded", (event) => {
         
         let humanScore = 0;
         let computerScore = 0;
-       
+        const scores = document.querySelector(".scores");
+        const resultDiv = document.querySelector(".result");
+        scores.textContent = "human: " + humanScore.toString() + ", computer: " +computerScore.toString();  
+        
         function playRound(humanSelection, computerSelection) {
             console.log("Human: " + humanSelection);
             console.log("Computer: " + computerSelection);
             let tempHumanChoice = humanSelection.toLowerCase();
             let tempComputerChoice = computerSelection.toLowerCase();
-            const resultDiv = document.querySelector(".result");
         
             if (tempHumanChoice === "paper" && tempComputerChoice === "rock"){
                 resultDiv.textContent = "You win! Paper beats Rock";
@@ -61,6 +63,15 @@ document.addEventListener("DOMContentLoaded", (event) => {
             else {
                 resultDiv.textContent = "TIE!";
             }
+            
+            scores.textContent = "human: " + humanScore.toString() + ", computer: " +computerScore.toString();  
+
+            if (humanScore === 5) {   
+                resultDiv.textContent = "Winer is Human!"
+            }
+            else if (computerScore === 5) {
+                resultDiv.textContent ="Winer is Computer"
+            }
         }
     
         const btns = document.querySelectorAll("button");
@@ -72,13 +83,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
             });
         });
             
-            
-        if (humanScore > computerScore) {   
-            console.log("Winer is Human!")
-        }
-        else if (computerScore > humanScore) {
-            console.log("Winer is Computer")
-        }
     }
     
     playGame();
