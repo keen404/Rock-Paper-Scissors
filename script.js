@@ -63,15 +63,27 @@ document.addEventListener("DOMContentLoaded", (event) => {
             else {
                 resultDiv.textContent = "TIE!";
             }
-            
+
             scores.textContent = "human: " + humanScore.toString() + ", computer: " +computerScore.toString();  
 
+            let winner = false;
             if (humanScore === 5) {   
                 resultDiv.textContent = "Winer is Human!"
+                winner = true;
             }
             else if (computerScore === 5) {
                 resultDiv.textContent ="Winer is Computer"
+                winner = true;
             }
+
+            if (winner) {
+                const btns = document.querySelectorAll("button");
+
+                btns.forEach(function (btn) {
+                    btn.style.visibility = 'hidden';
+                })
+            }
+            
         }
     
         const btns = document.querySelectorAll("button");
